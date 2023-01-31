@@ -45,10 +45,12 @@ console.log("result of multiplication is", 2*5*10);
 //    or greater than zero, and false otherwise
 function isPositive( number ) {
   if ( number > 0 ){
-    return;
+    return true;
+  } else {
+    return false;
   }
-    return;
 }
+isPositive();
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
 console.log( 'isPositive - should say true', isPositive(3) );
@@ -58,17 +60,24 @@ console.log( 'isPositive - should say false', isPositive(-3) );
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
-function getLast( array ) {
-
+const arrayOfNumbers = [1,2,3]; 
+function getLast(arrayIn){
+  return arrayIn[arrayIn.length - 1];
 }
+console.log('when calling with an array, expect 3', getLast(arrayOfNumbers));
+console.log('when calling with an array, expect 5', getLast([3,4,5]));
+console.log('when passing an empty array, expect undefined', getLast([]));
+//console.log('The last item is', array[array.length - 1]);
+  //getLast();
 
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
+let array1 = [1,2,3,4]
 function find( value, array ){
-  
-}
 
+}
+console.log()
 // ----------------------
 // Stretch Goals
 // ----------------------
