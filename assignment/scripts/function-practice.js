@@ -73,15 +73,20 @@ console.log('when passing an empty array, expect undefined', getLast([]));
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
-let numbers = [1,2,3,4]
-function number(value)
-for(let i = 0: i < number.length; i++) {
-  if(numbers[i] > 0) 
-  return false; {
-    console.log('numbers'); 
-  }
-}
-//console.log('when calling with an array, expect false', find(numbers));
+      function find(value, listOfItems) {
+        for(let item of listOfItems) {
+          console.log(value, item);
+          if(value === item) {
+            console.log('Found a match!');
+            return true;
+          } else {
+            console.log('does not match');
+          }
+        }
+        return false;
+      }
+      console.log(`find 'A' in ['A','B','C'], expect: true-`, find('A', ['A','B','C']));
+      console.log(`find 'Z' in ['A','B','C'], expect: false-`, find('Z', ['A','B','C']));
 // ----------------------
 // Stretch Goals
 // ----------------------
